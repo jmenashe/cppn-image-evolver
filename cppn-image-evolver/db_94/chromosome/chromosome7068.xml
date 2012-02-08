@@ -1,0 +1,17 @@
+<chromosome id="7068" primary-parent-id="7002"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.274674296908075"/>
+<neuron id="177" type="hid" activation="linear"/>
+<connection id="178" src-id="5" dest-id="177" weight="2.2611658448509675"/>
+<connection id="193" src-id="3" dest-id="4" weight="0.1860067630572697"/>
+<neuron id="329" type="hid" activation="signed.sigmoid"/>
+<connection id="330" src-id="177" dest-id="329" weight="1.0"/>
+<connection id="331" src-id="329" dest-id="4" weight="-1.900320896022093"/>
+<neuron id="6428" type="hid" activation="signed.gaussian"/>
+<connection id="6429" src-id="1" dest-id="6428" weight="2.2464816857242598"/>
+<connection id="6430" src-id="6428" dest-id="4" weight="0.9686433186980768"/>
+</chromosome>

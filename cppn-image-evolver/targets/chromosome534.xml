@@ -1,0 +1,16 @@
+<chromosome id="534">
+<neuron id="0" type="in" activation="identity(x)" label="bias"/>
+<neuron id="1" type="in" activation="identity(x)" label="d"/>
+<neuron id="2" type="in" activation="identity(x)" label="x"/>
+<neuron id="3" type="in" activation="identity(x)" label="y"/>
+<neuron id="4" type="out" activation="gaussian(x)" label="ink"/>
+<neuron id="5" type="hid" activation="gaussian(x)"/>
+<neuron id="32" type="hid" activation="gaussian(x)"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.1605520099747042"/>
+<connection id="7" src-id="1" dest-id="5" weight="-2.6599502476262415"/>
+<connection id="8" src-id="2" dest-id="5" weight="-1.4845822199683032"/>
+<connection id="9" src-id="3" dest-id="5" weight="1.1384253451871493"/>
+<connection id="10" src-id="5" dest-id="4" weight="-0.8084863515132545"/>
+<connection id="33" src-id="1" dest-id="32" weight="-1.7705033073223762"/>
+<connection id="34" src-id="32" dest-id="5" weight="-1.2496008410430113"/>
+</chromosome>

@@ -1,0 +1,13 @@
+<chromosome id="8854">
+<neuron id="0" type="in" activation="identity(x)" label="bias"/>
+<neuron id="1" type="in" activation="identity(x)" label="d"/>
+<neuron id="2" type="in" activation="identity(x)" label="x"/>
+<neuron id="3" type="in" activation="identity(x)" label="y"/>
+<neuron id="4" type="out" activation="gaussian(x)" label="ink"/>
+<neuron id="5" type="hid" activation="sin(x)"/>
+<connection id="6" src-id="0" dest-id="5" weight="-2.311816456983167"/>
+<connection id="7" src-id="1" dest-id="5" weight="1.7337600685094008"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.47158782115841213"/>
+<connection id="9" src-id="3" dest-id="5" weight="0.9923044291170611"/>
+<connection id="10" src-id="5" dest-id="4" weight="-1.4175368166769522"/>
+</chromosome>

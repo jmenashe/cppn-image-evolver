@@ -1,0 +1,14 @@
+<chromosome id="3797" primary-parent-id="3397"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.226292366606136"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.171938805944063"/>
+<connection id="9" src-id="3" dest-id="5" weight="-1.3699625393282773"/>
+<connection id="10" src-id="5" dest-id="4" weight="-2.487343448525758"/>
+<connection id="173" src-id="2" dest-id="4" weight="-1.6761595062463"/>
+<connection id="186" src-id="0" dest-id="4" weight="0.4647764635190514"/>
+<connection id="193" src-id="3" dest-id="4" weight="-3.0"/>
+</chromosome>

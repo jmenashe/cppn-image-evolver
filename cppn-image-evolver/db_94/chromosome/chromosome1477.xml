@@ -1,0 +1,18 @@
+<chromosome id="1477" primary-parent-id="702"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.12494180318599668"/>
+<connection id="7" src-id="1" dest-id="5" weight="-1.8599249704083762"/>
+<connection id="8" src-id="2" dest-id="5" weight="2.1296025532559435"/>
+<connection id="9" src-id="3" dest-id="5" weight="-1.5030500239788016"/>
+<neuron id="177" type="hid" activation="signed.sinusoid"/>
+<connection id="178" src-id="5" dest-id="177" weight="0.4172645227102557"/>
+<neuron id="329" type="hid" activation="signed.sinusoid"/>
+<connection id="331" src-id="329" dest-id="4" weight="-0.35860354500265534"/>
+<neuron id="604" type="hid" activation="signed.gaussian"/>
+<connection id="605" src-id="177" dest-id="604" weight="1.0"/>
+<connection id="606" src-id="604" dest-id="329" weight="0.04758108437810771"/>
+</chromosome>

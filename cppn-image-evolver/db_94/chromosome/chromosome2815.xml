@@ -1,0 +1,14 @@
+<chromosome id="2815" primary-parent-id="2684"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.09978079795837402"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.171938805944063"/>
+<connection id="9" src-id="3" dest-id="5" weight="-1.3699625393282773"/>
+<connection id="10" src-id="5" dest-id="4" weight="-3.0"/>
+<connection id="173" src-id="2" dest-id="4" weight="-1.8158548118826565"/>
+<connection id="186" src-id="0" dest-id="4" weight="0.5851926446031208"/>
+<connection id="193" src-id="3" dest-id="4" weight="-2.3491151700260557"/>
+</chromosome>

@@ -1,0 +1,12 @@
+<chromosome id="71"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.15902817249298096"/>
+<connection id="7" src-id="1" dest-id="5" weight="0.22705793380737305"/>
+<connection id="8" src-id="2" dest-id="5" weight="-0.5725154876708984"/>
+<connection id="9" src-id="3" dest-id="5" weight="-0.9774351119995117"/>
+<connection id="10" src-id="5" dest-id="4" weight="0.00958704948425293"/>
+</chromosome>

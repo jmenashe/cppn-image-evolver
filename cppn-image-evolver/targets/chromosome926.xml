@@ -1,0 +1,23 @@
+<chromosome id="926">
+<neuron id="0" type="in" activation="identity(x)" label="bias"/>
+<neuron id="1" type="in" activation="identity(x)" label="d"/>
+<neuron id="2" type="in" activation="identity(x)" label="x"/>
+<neuron id="3" type="in" activation="identity(x)" label="y"/>
+<neuron id="4" type="out" activation="gaussian(x)" label="ink"/>
+<neuron id="5" type="hid" activation="gaussian(x)"/>
+<neuron id="25" type="hid" activation="gaussian(x)"/>
+<neuron id="42" type="hid" activation="gaussian(x)"/>
+<neuron id="54" type="hid" activation="gaussian(x)"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.41000803506325223"/>
+<connection id="7" src-id="1" dest-id="5" weight="0.8361665020042219"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.21808421997948835"/>
+<connection id="9" src-id="3" dest-id="5" weight="-1.2109585174259574"/>
+<connection id="10" src-id="5" dest-id="4" weight="0.7427616419330128"/>
+<connection id="12" src-id="1" dest-id="4" weight="2.3527031546463775"/>
+<connection id="26" src-id="3" dest-id="25" weight="2.4636999880923085"/>
+<connection id="27" src-id="25" dest-id="5" weight="-1.9072705864080977"/>
+<connection id="43" src-id="2" dest-id="42" weight="-1.5385297344438416"/>
+<connection id="44" src-id="42" dest-id="5" weight="2.357748771699943"/>
+<connection id="55" src-id="5" dest-id="54" weight="-2.2020585308501435"/>
+<connection id="56" src-id="54" dest-id="4" weight="2.231358178856091"/>
+</chromosome>

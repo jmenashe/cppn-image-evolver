@@ -1,0 +1,17 @@
+<chromosome id="5220" primary-parent-id="5104"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="0.32441484928131104"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.8127855636038537"/>
+<connection id="10" src-id="5" dest-id="4" weight="-1.554428490455624"/>
+<connection id="173" src-id="2" dest-id="4" weight="-0.6830830574035645"/>
+<connection id="193" src-id="3" dest-id="4" weight="-2.1795235384047147"/>
+<neuron id="457" type="hid" activation="signed.sinusoid"/>
+<connection id="458" src-id="2" dest-id="457" weight="1.3115635618177586"/>
+<neuron id="2048" type="hid" activation="linear"/>
+<connection id="2049" src-id="457" dest-id="2048" weight="1.1692350078607452"/>
+<connection id="2050" src-id="2048" dest-id="5" weight="-1.7039177564911951"/>
+</chromosome>

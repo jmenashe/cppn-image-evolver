@@ -1,0 +1,16 @@
+<chromosome id="6843" primary-parent-id="6761"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<connection id="193" src-id="3" dest-id="4" weight="-0.8506586739705323"/>
+<neuron id="198" type="hid" activation="signed.sigmoid"/>
+<connection id="199" src-id="0" dest-id="198" weight="1.1619280199343376"/>
+<connection id="326" src-id="2" dest-id="198" weight="-0.4183783539763381"/>
+<neuron id="1137" type="hid" activation="signed.sinusoid"/>
+<connection id="1138" src-id="198" dest-id="1137" weight="0.5747729453951861"/>
+<connection id="1409" src-id="1" dest-id="1137" weight="0.49427877859641334"/>
+<neuron id="3352" type="hid" activation="signed.sigmoid"/>
+<connection id="3353" src-id="1137" dest-id="3352" weight="0.7789329579056724"/>
+<connection id="3354" src-id="3352" dest-id="4" weight="3.0"/>
+</chromosome>

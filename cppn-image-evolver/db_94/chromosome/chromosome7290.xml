@@ -1,0 +1,19 @@
+<chromosome id="7290" primary-parent-id="7145"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="10" src-id="5" dest-id="4" weight="-1.770631770106506"/>
+<neuron id="161" type="hid" activation="signed.sinusoid"/>
+<connection id="162" src-id="3" dest-id="161" weight="-2.5272728647758664"/>
+<connection id="163" src-id="161" dest-id="5" weight="-0.6316342182937978"/>
+<neuron id="174" type="hid" activation="signed.gaussian"/>
+<connection id="175" src-id="1" dest-id="174" weight="1.0"/>
+<connection id="176" src-id="174" dest-id="5" weight="3.0"/>
+<neuron id="747" type="hid" activation="signed.gaussian"/>
+<connection id="748" src-id="3" dest-id="747" weight="2.5358068977117947"/>
+<neuron id="2445" type="hid" activation="signed.sinusoid"/>
+<connection id="2446" src-id="747" dest-id="2445" weight="1.0"/>
+<connection id="2447" src-id="2445" dest-id="161" weight="1.759725599380761"/>
+</chromosome>

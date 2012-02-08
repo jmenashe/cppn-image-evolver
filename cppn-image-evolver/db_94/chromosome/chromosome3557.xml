@@ -1,0 +1,21 @@
+<chromosome id="3557" primary-parent-id="2466"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="1.853122172116952"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.4159271625795522"/>
+<connection id="9" src-id="3" dest-id="5" weight="-2.199066159475914"/>
+<connection id="10" src-id="5" dest-id="4" weight="-3.0"/>
+<connection id="193" src-id="3" dest-id="4" weight="-1.6492469938008782"/>
+<neuron id="198" type="hid" activation="signed.sigmoid"/>
+<connection id="199" src-id="0" dest-id="198" weight="1.3346442725957435"/>
+<neuron id="454" type="hid" activation="signed.sinusoid"/>
+<connection id="455" src-id="198" dest-id="454" weight="2.2303523084085364"/>
+<connection id="456" src-id="454" dest-id="5" weight="-0.47046709296013106"/>
+<connection id="462" src-id="198" dest-id="4" weight="0.05108810291642474"/>
+<neuron id="1142" type="hid" activation="signed.sinusoid"/>
+<connection id="1143" src-id="0" dest-id="1142" weight="1.0"/>
+<connection id="1144" src-id="1142" dest-id="4" weight="0.44681709188370144"/>
+</chromosome>

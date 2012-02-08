@@ -1,0 +1,15 @@
+<chromosome id="8131" primary-parent-id="8010"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="3.0"/>
+<connection id="9" src-id="3" dest-id="5" weight="0.37292780184885554"/>
+<connection id="10" src-id="5" dest-id="4" weight="-1.6203778424697142"/>
+<neuron id="1011" type="hid" activation="signed.sigmoid"/>
+<connection id="1013" src-id="1011" dest-id="4" weight="-3.0"/>
+<neuron id="4778" type="hid" activation="linear"/>
+<connection id="4779" src-id="3" dest-id="4778" weight="-0.32137538841442936"/>
+<connection id="4780" src-id="4778" dest-id="1011" weight="0.9007504251130809"/>
+</chromosome>

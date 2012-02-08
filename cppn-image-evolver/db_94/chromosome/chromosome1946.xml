@@ -1,0 +1,19 @@
+<chromosome id="1946" primary-parent-id="1539"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="0.07239442786660222"/>
+<neuron id="177" type="hid" activation="signed.sinusoid"/>
+<connection id="178" src-id="5" dest-id="177" weight="-0.29377786296096003"/>
+<connection id="179" src-id="177" dest-id="4" weight="0.009429787253750793"/>
+<neuron id="198" type="hid" activation="linear"/>
+<connection id="200" src-id="198" dest-id="5" weight="-0.8586708907587419"/>
+<neuron id="457" type="hid" activation="linear"/>
+<connection id="458" src-id="2" dest-id="457" weight="0.7681033119369371"/>
+<connection id="459" src-id="457" dest-id="5" weight="2.874337722402006"/>
+<neuron id="734" type="hid" activation="signed.gaussian"/>
+<connection id="735" src-id="0" dest-id="734" weight="-0.6933997644640659"/>
+<connection id="736" src-id="734" dest-id="198" weight="0.16288826452729233"/>
+</chromosome>

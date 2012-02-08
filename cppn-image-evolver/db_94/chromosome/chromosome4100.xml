@@ -1,0 +1,14 @@
+<chromosome id="4100" primary-parent-id="3988"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="0.07239442786660222"/>
+<neuron id="177" type="hid" activation="signed.sinusoid"/>
+<connection id="178" src-id="5" dest-id="177" weight="-0.29377786296096003"/>
+<connection id="179" src-id="177" dest-id="4" weight="0.009429787253750793"/>
+<neuron id="457" type="hid" activation="linear"/>
+<connection id="458" src-id="2" dest-id="457" weight="-0.21632272703585753"/>
+<connection id="459" src-id="457" dest-id="5" weight="2.874337722402006"/>
+</chromosome>

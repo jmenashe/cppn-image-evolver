@@ -1,0 +1,21 @@
+<chromosome id="7541" primary-parent-id="7432"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="1.5178711888747372"/>
+<neuron id="177" type="hid" activation="linear"/>
+<connection id="178" src-id="5" dest-id="177" weight="3.0"/>
+<connection id="193" src-id="3" dest-id="4" weight="-1.2185497077060008"/>
+<neuron id="329" type="hid" activation="signed.sigmoid"/>
+<connection id="330" src-id="177" dest-id="329" weight="0.24091958205257658"/>
+<connection id="331" src-id="329" dest-id="4" weight="-1.900320896022093"/>
+<neuron id="6428" type="hid" activation="signed.gaussian"/>
+<connection id="6430" src-id="6428" dest-id="4" weight="1.2492578866606303"/>
+<neuron id="7308" type="hid" activation="signed.gaussian"/>
+<connection id="7310" src-id="7308" dest-id="6428" weight="0.2935227617152185"/>
+<neuron id="7442" type="hid" activation="signed.sigmoid"/>
+<connection id="7443" src-id="1" dest-id="7442" weight="1.0"/>
+<connection id="7444" src-id="7442" dest-id="7308" weight="1.0"/>
+</chromosome>

@@ -1,0 +1,18 @@
+<chromosome id="1018" primary-parent-id="1005"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="1.9687530150694754"/>
+<connection id="8" src-id="2" dest-id="5" weight="-0.20473559736039287"/>
+<connection id="9" src-id="3" dest-id="5" weight="-0.38826785927318874"/>
+<connection id="10" src-id="5" dest-id="4" weight="-3.0"/>
+<neuron id="198" type="hid" activation="signed.sigmoid"/>
+<connection id="199" src-id="0" dest-id="198" weight="3.0"/>
+<connection id="200" src-id="198" dest-id="5" weight="-0.46187734603881836"/>
+<connection id="462" src-id="198" dest-id="4" weight="0.8701415345154632"/>
+<neuron id="1011" type="hid" activation="signed.sigmoid"/>
+<connection id="1012" src-id="3" dest-id="1011" weight="1.0"/>
+<connection id="1013" src-id="1011" dest-id="4" weight="-0.5361372232437134"/>
+</chromosome>

@@ -1,0 +1,18 @@
+<chromosome id="4409" primary-parent-id="4293"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="10" src-id="5" dest-id="4" weight="-1.554428490455624"/>
+<neuron id="161" type="hid" activation="signed.sinusoid"/>
+<connection id="162" src-id="3" dest-id="161" weight="1.1565612993150343"/>
+<connection id="163" src-id="161" dest-id="5" weight="-1.5986685181225195"/>
+<neuron id="174" type="hid" activation="signed.sinusoid"/>
+<connection id="175" src-id="1" dest-id="174" weight="1.0"/>
+<connection id="176" src-id="174" dest-id="5" weight="3.0"/>
+<connection id="193" src-id="3" dest-id="4" weight="-2.462391252550967"/>
+<neuron id="457" type="hid" activation="signed.sinusoid"/>
+<connection id="458" src-id="2" dest-id="457" weight="1.4250666607002467"/>
+<connection id="459" src-id="457" dest-id="5" weight="-1.7039177564911951"/>
+</chromosome>

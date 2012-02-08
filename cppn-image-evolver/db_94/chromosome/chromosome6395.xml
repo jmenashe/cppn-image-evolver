@@ -1,0 +1,13 @@
+<chromosome id="6395" primary-parent-id="5891"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="7" src-id="1" dest-id="5" weight="1.536772574288262"/>
+<connection id="10" src-id="5" dest-id="4" weight="-1.3589145795319335"/>
+<connection id="197" src-id="1" dest-id="4" weight="-0.14892828464508057"/>
+<neuron id="1011" type="hid" activation="linear"/>
+<connection id="1012" src-id="3" dest-id="1011" weight="-0.09406975518811644"/>
+<connection id="1013" src-id="1011" dest-id="4" weight="-0.340466956830231"/>
+</chromosome>

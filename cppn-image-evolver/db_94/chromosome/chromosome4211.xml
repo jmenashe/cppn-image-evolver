@@ -1,0 +1,19 @@
+<chromosome id="4211" primary-parent-id="4077"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="161" type="hid" activation="linear"/>
+<connection id="162" src-id="3" dest-id="161" weight="2.53165005968937"/>
+<neuron id="177" type="hid" activation="signed.sinusoid"/>
+<neuron id="329" type="hid" activation="signed.sinusoid"/>
+<connection id="330" src-id="177" dest-id="329" weight="0.37076212721614277"/>
+<connection id="331" src-id="329" dest-id="4" weight="0.14211769525117035"/>
+<neuron id="470" type="hid" activation="signed.sigmoid"/>
+<connection id="472" src-id="470" dest-id="177" weight="0.06219412970205984"/>
+<neuron id="2575" type="hid" activation="signed.sinusoid"/>
+<connection id="2576" src-id="161" dest-id="2575" weight="-0.8415744350506441"/>
+<neuron id="4001" type="hid" activation="signed.gaussian"/>
+<connection id="4002" src-id="2575" dest-id="4001" weight="1.0"/>
+<connection id="4003" src-id="4001" dest-id="470" weight="0.6134446512669247"/>
+</chromosome>

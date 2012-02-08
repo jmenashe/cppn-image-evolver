@@ -1,0 +1,18 @@
+<chromosome id="2486" primary-parent-id="2430"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.12494180318599668"/>
+<connection id="7" src-id="1" dest-id="5" weight="-1.2031029284844204"/>
+<connection id="8" src-id="2" dest-id="5" weight="2.1296025532559435"/>
+<connection id="9" src-id="3" dest-id="5" weight="0.4748536710110209"/>
+<neuron id="177" type="hid" activation="signed.sinusoid"/>
+<connection id="178" src-id="5" dest-id="177" weight="0.4172645227102557"/>
+<neuron id="329" type="hid" activation="signed.sinusoid"/>
+<connection id="330" src-id="177" dest-id="329" weight="-1.6113147645214654"/>
+<neuron id="1267" type="hid" activation="linear"/>
+<connection id="1268" src-id="329" dest-id="1267" weight="1.0"/>
+<connection id="1269" src-id="1267" dest-id="4" weight="0.1638396221843939"/>
+</chromosome>

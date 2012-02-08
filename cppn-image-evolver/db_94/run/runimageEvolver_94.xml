@@ -1,0 +1,618 @@
+<run name="imageEvolver_94" timedatestamp="[20120203 13:17:10 - 20120203 13:21:48]" >
+<search-parameters>
+<population-size>150</population-size>
+<generations>30000</generations>
+</search-parameters>
+<generation id="1" >
+<champ id="11" >
+<fitness>-1</fitness>
+<novelty>3833</novelty>
+<nodes>6</nodes>
+<connections>5</connections>
+</champ>
+<species count="1" />
+</generation>
+<generation id="2" >
+<champ id="71" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>6</nodes>
+<connections>5</connections>
+</champ>
+<species count="6" />
+</generation>
+<generation id="3" >
+<champ id="71" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>6</nodes>
+<connections>5</connections>
+</champ>
+<species count="9" />
+</generation>
+<generation id="4" >
+<champ id="71" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>6</nodes>
+<connections>5</connections>
+</champ>
+<species count="17" />
+</generation>
+<generation id="5" >
+<champ id="71" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>6</nodes>
+<connections>5</connections>
+</champ>
+<species count="21" />
+</generation>
+<generation id="6" >
+<champ id="228" >
+<fitness>-1</fitness>
+<novelty>6193</novelty>
+<nodes>5</nodes>
+<connections>0</connections>
+</champ>
+<species count="26" />
+</generation>
+<generation id="7" >
+<champ id="228" >
+<fitness>-1</fitness>
+<novelty>6193</novelty>
+<nodes>5</nodes>
+<connections>0</connections>
+</champ>
+<species count="29" />
+</generation>
+<generation id="8" >
+<champ id="228" >
+<fitness>-1</fitness>
+<novelty>6193</novelty>
+<nodes>5</nodes>
+<connections>0</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="9" >
+<champ id="977" >
+<fitness>-1</fitness>
+<novelty>3168</novelty>
+<nodes>8</nodes>
+<connections>6</connections>
+</champ>
+<species count="37" />
+</generation>
+<generation id="10" >
+<champ id="1018" >
+<fitness>-1</fitness>
+<novelty>6437</novelty>
+<nodes>8</nodes>
+<connections>9</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="11" >
+<champ id="1227" >
+<fitness>-1</fitness>
+<novelty>4291</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="12" >
+<champ id="1493" >
+<fitness>-1</fitness>
+<novelty>6159</novelty>
+<nodes>9</nodes>
+<connections>7</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="13" >
+<champ id="1090" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>9</nodes>
+<connections>7</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="14" >
+<champ id="1477" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>9</nodes>
+<connections>8</connections>
+</champ>
+<species count="34" />
+</generation>
+<generation id="15" >
+<champ id="1585" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>10</nodes>
+<connections>9</connections>
+</champ>
+<species count="41" />
+</generation>
+<generation id="16" >
+<champ id="1176" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>9</nodes>
+<connections>7</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="17" >
+<champ id="2067" >
+<fitness>-1</fitness>
+<novelty>6349</novelty>
+<nodes>9</nodes>
+<connections>7</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="18" >
+<champ id="2218" >
+<fitness>-1</fitness>
+<novelty>2181</novelty>
+<nodes>10</nodes>
+<connections>9</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="19" >
+<champ id="2173" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="20" >
+<champ id="2486" >
+<fitness>-1</fitness>
+<novelty>5645</novelty>
+<nodes>9</nodes>
+<connections>8</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="21" >
+<champ id="2302" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="41" />
+</generation>
+<generation id="22" >
+<champ id="2815" >
+<fitness>-1</fitness>
+<novelty>6489</novelty>
+<nodes>6</nodes>
+<connections>7</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="23" >
+<champ id="2872" >
+<fitness>-1</fitness>
+<novelty>6292</novelty>
+<nodes>8</nodes>
+<connections>9</connections>
+</champ>
+<species count="39" />
+</generation>
+<generation id="24" >
+<champ id="2872" >
+<fitness>-1</fitness>
+<novelty>6292</novelty>
+<nodes>8</nodes>
+<connections>9</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="25" >
+<champ id="2875" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>12</nodes>
+<connections>10</connections>
+</champ>
+<species count="33" />
+</generation>
+<generation id="26" >
+<champ id="3283" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>9</nodes>
+<connections>5</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="27" >
+<champ id="3191" >
+<fitness>-1</fitness>
+<novelty>6619</novelty>
+<nodes>11</nodes>
+<connections>10</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="28" >
+<champ id="1946" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="29" >
+<champ id="3557" >
+<fitness>-1</fitness>
+<novelty>4515</novelty>
+<nodes>9</nodes>
+<connections>11</connections>
+</champ>
+<species count="39" />
+</generation>
+<generation id="30" >
+<champ id="1946" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="31" >
+<champ id="3685" >
+<fitness>-1</fitness>
+<novelty>6373</novelty>
+<nodes>11</nodes>
+<connections>9</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="32" >
+<champ id="3390" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>10</nodes>
+<connections>6</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="33" >
+<champ id="4137" >
+<fitness>-1</fitness>
+<novelty>2532</novelty>
+<nodes>7</nodes>
+<connections>4</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="34" >
+<champ id="3797" >
+<fitness>-1</fitness>
+<novelty>6644</novelty>
+<nodes>6</nodes>
+<connections>7</connections>
+</champ>
+<species count="37" />
+</generation>
+<generation id="35" >
+<champ id="4077" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>13</nodes>
+<connections>11</connections>
+</champ>
+<species count="37" />
+</generation>
+<generation id="36" >
+<champ id="4409" >
+<fitness>-1</fitness>
+<novelty>6178</novelty>
+<nodes>9</nodes>
+<connections>8</connections>
+</champ>
+<species count="39" />
+</generation>
+<generation id="37" >
+<champ id="4100" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>8</nodes>
+<connections>5</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="38" >
+<champ id="4211" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>11</nodes>
+<connections>7</connections>
+</champ>
+<species count="45" />
+</generation>
+<generation id="39" >
+<champ id="4962" >
+<fitness>-1</fitness>
+<novelty>6350</novelty>
+<nodes>10</nodes>
+<connections>10</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="40" >
+<champ id="4331" >
+<fitness>-1</fitness>
+<novelty>6451</novelty>
+<nodes>11</nodes>
+<connections>12</connections>
+</champ>
+<species count="33" />
+</generation>
+<generation id="41" >
+<champ id="5273" >
+<fitness>-1</fitness>
+<novelty>6501</novelty>
+<nodes>10</nodes>
+<connections>9</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="42" >
+<champ id="5220" >
+<fitness>-1</fitness>
+<novelty>6318</novelty>
+<nodes>8</nodes>
+<connections>8</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="43" >
+<champ id="4646" >
+<fitness>-1</fitness>
+<novelty>6498</novelty>
+<nodes>9</nodes>
+<connections>8</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="44" >
+<champ id="5464" >
+<fitness>-1</fitness>
+<novelty>5485</novelty>
+<nodes>8</nodes>
+<connections>5</connections>
+</champ>
+<species count="34" />
+</generation>
+<generation id="45" >
+<champ id="5453" >
+<fitness>-1</fitness>
+<novelty>5571</novelty>
+<nodes>9</nodes>
+<connections>10</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="46" >
+<champ id="5403" >
+<fitness>-1</fitness>
+<novelty>6571</novelty>
+<nodes>9</nodes>
+<connections>12</connections>
+</champ>
+<species count="34" />
+</generation>
+<generation id="47" >
+<champ id="5967" >
+<fitness>-1</fitness>
+<novelty>6534</novelty>
+<nodes>9</nodes>
+<connections>10</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="48" >
+<champ id="5946" >
+<fitness>-1</fitness>
+<novelty>6502</novelty>
+<nodes>12</nodes>
+<connections>15</connections>
+</champ>
+<species count="39" />
+</generation>
+<generation id="49" >
+<champ id="5986" >
+<fitness>-1</fitness>
+<novelty>6266</novelty>
+<nodes>9</nodes>
+<connections>8</connections>
+</champ>
+<species count="41" />
+</generation>
+<generation id="50" >
+<champ id="5986" >
+<fitness>-1</fitness>
+<novelty>6266</novelty>
+<nodes>9</nodes>
+<connections>8</connections>
+</champ>
+<species count="42" />
+</generation>
+<generation id="51" >
+<champ id="6395" >
+<fitness>-1</fitness>
+<novelty>6028</novelty>
+<nodes>7</nodes>
+<connections>5</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="52" >
+<champ id="6518" >
+<fitness>-1</fitness>
+<novelty>6566</novelty>
+<nodes>11</nodes>
+<connections>12</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="53" >
+<champ id="6803" >
+<fitness>-1</fitness>
+<novelty>6254</novelty>
+<nodes>10</nodes>
+<connections>9</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="54" >
+<champ id="6843" >
+<fitness>-1</fitness>
+<novelty>2203</novelty>
+<nodes>8</nodes>
+<connections>7</connections>
+</champ>
+<species count="41" />
+</generation>
+<generation id="55" >
+<champ id="6878" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>7</nodes>
+<connections>3</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="56" >
+<champ id="7068" >
+<fitness>-1</fitness>
+<novelty>6657</novelty>
+<nodes>9</nodes>
+<connections>7</connections>
+</champ>
+<species count="39" />
+</generation>
+<generation id="57" >
+<champ id="7290" >
+<fitness>-1</fitness>
+<novelty>4184</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="35" />
+</generation>
+<generation id="58" >
+<champ id="6935" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>9</nodes>
+<connections>6</connections>
+</champ>
+<species count="41" />
+</generation>
+<generation id="59" >
+<champ id="7541" >
+<fitness>-1</fitness>
+<novelty>1186</novelty>
+<nodes>11</nodes>
+<connections>9</connections>
+</champ>
+<species count="44" />
+</generation>
+<generation id="60" >
+<champ id="7093" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>8</nodes>
+<connections>6</connections>
+</champ>
+<species count="39" />
+</generation>
+<generation id="61" >
+<champ id="7694" >
+<fitness>-1</fitness>
+<novelty>5957</novelty>
+<nodes>8</nodes>
+<connections>4</connections>
+</champ>
+<species count="41" />
+</generation>
+<generation id="62" >
+<champ id="7777" >
+<fitness>-1</fitness>
+<novelty>6352</novelty>
+<nodes>7</nodes>
+<connections>5</connections>
+</champ>
+<species count="38" />
+</generation>
+<generation id="63" >
+<champ id="6878" >
+<fitness>-1</fitness>
+<novelty>6299</novelty>
+<nodes>7</nodes>
+<connections>3</connections>
+</champ>
+<species count="36" />
+</generation>
+<generation id="64" >
+<champ id="8131" >
+<fitness>-1</fitness>
+<novelty>6338</novelty>
+<nodes>8</nodes>
+<connections>6</connections>
+</champ>
+<species count="40" />
+</generation>
+<generation id="65" >
+<champ id="7568" >
+<fitness>-1</fitness>
+<novelty>6459</novelty>
+<nodes>9</nodes>
+<connections>6</connections>
+</champ>
+<species count="37" />
+</generation>
+<generation id="66" >
+<champ id="8499" >
+<fitness>-1</fitness>
+<novelty>4411</novelty>
+<nodes>8</nodes>
+<connections>6</connections>
+</champ>
+<species count="42" />
+</generation>
+<generation id="67" >
+<champ id="8555" >
+<fitness>-1</fitness>
+<novelty>6487</novelty>
+<nodes>10</nodes>
+<connections>11</connections>
+</champ>
+<species count="37" />
+</generation>
+<generation id="68" >
+<champ id="8613" >
+<fitness>-1</fitness>
+<novelty>6485</novelty>
+<nodes>10</nodes>
+<connections>8</connections>
+</champ>
+<species count="41" />
+</generation>
+</run>

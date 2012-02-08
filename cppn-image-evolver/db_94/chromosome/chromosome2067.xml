@@ -1,0 +1,17 @@
+<chromosome id="2067" primary-parent-id="1613"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.2261723826760687"/>
+<connection id="10" src-id="5" dest-id="4" weight="1.2160986247764765"/>
+<neuron id="161" type="hid" activation="signed.sinusoid"/>
+<connection id="163" src-id="161" dest-id="5" weight="0.4698573930851664"/>
+<neuron id="174" type="hid" activation="signed.sinusoid"/>
+<connection id="175" src-id="1" dest-id="174" weight="1.0"/>
+<connection id="176" src-id="174" dest-id="5" weight="-1.2910474727505998"/>
+<neuron id="747" type="hid" activation="signed.sinusoid"/>
+<connection id="748" src-id="3" dest-id="747" weight="0.4192511400478732"/>
+<connection id="749" src-id="747" dest-id="161" weight="0.652761838107734"/>
+</chromosome>

@@ -1,0 +1,21 @@
+<chromosome id="3685" primary-parent-id="3538"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.2261723826760687"/>
+<connection id="10" src-id="5" dest-id="4" weight="1.2160986247764765"/>
+<neuron id="161" type="hid" activation="signed.sinusoid"/>
+<neuron id="174" type="hid" activation="signed.sinusoid"/>
+<connection id="175" src-id="1" dest-id="174" weight="0.8242912455915756"/>
+<connection id="176" src-id="174" dest-id="5" weight="-1.4148423998960782"/>
+<neuron id="463" type="hid" activation="signed.gaussian"/>
+<connection id="464" src-id="161" dest-id="463" weight="-0.40358725202727525"/>
+<neuron id="747" type="hid" activation="linear"/>
+<connection id="748" src-id="3" dest-id="747" weight="1.0"/>
+<connection id="749" src-id="747" dest-id="161" weight="2.3204501652443694"/>
+<neuron id="1399" type="hid" activation="signed.sigmoid"/>
+<connection id="1400" src-id="463" dest-id="1399" weight="0.5627018382095419"/>
+<connection id="1401" src-id="1399" dest-id="5" weight="0.9926761038731926"/>
+</chromosome>

@@ -1,0 +1,17 @@
+<chromosome id="1176" primary-parent-id="1037"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-3.0"/>
+<connection id="8" src-id="2" dest-id="5" weight="-0.7783361334058474"/>
+<neuron id="174" type="hid" activation="signed.sinusoid"/>
+<connection id="175" src-id="1" dest-id="174" weight="0.3047611617642214"/>
+<neuron id="177" type="hid" activation="signed.sigmoid"/>
+<connection id="178" src-id="5" dest-id="177" weight="1.0"/>
+<connection id="179" src-id="177" dest-id="4" weight="3.0"/>
+<neuron id="466" type="hid" activation="signed.sigmoid"/>
+<connection id="467" src-id="174" dest-id="466" weight="1.7281182390170213"/>
+<connection id="468" src-id="466" dest-id="5" weight="-0.7984267473220825"/>
+</chromosome>

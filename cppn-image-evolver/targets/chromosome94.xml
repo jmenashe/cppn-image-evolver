@@ -1,0 +1,28 @@
+<chromosome id="94">
+<neuron id="21" type="in" activation="identity(x)" label="x"/>
+<neuron id="22" type="in" activation="identity(x)" label="y"/>
+<neuron id="23" type="in" activation="identity(x)" label="d"/>
+<neuron id="24" type="in" activation="identity(x)" label="bias"/>
+<neuron id="25" type="out" activation="gaussian(x)" label="ink"/>
+<neuron id="26" type="hid" activation="cos(x)"/>
+<neuron id="103" type="hid" activation="gaussian(x)"/>
+<neuron id="139" type="hid" activation="sin(x)"/>
+<neuron id="174" type="hid" activation="sigmoid(x)"/>
+<neuron id="297" type="hid" activation="gaussian(x)"/>
+<connection id="27" src-id="21" dest-id="26" weight="0.9657382167335797"/>
+<connection id="28" src-id="22" dest-id="26" weight="2.6709292013315045"/>
+<connection id="29" src-id="23" dest-id="26" weight="-3.0"/>
+<connection id="30" src-id="24" dest-id="26" weight="-0.9188641643775317"/>
+<connection id="31" src-id="26" dest-id="25" weight="1.3163295948740017"/>
+<connection id="106" src-id="22" dest-id="103" weight="-3.0"/>
+<connection id="107" src-id="103" dest-id="26" weight="3.0"/>
+<connection id="130" src-id="23" dest-id="25" weight="2.741504068431445"/>
+<connection id="140" src-id="26" dest-id="139" weight="1.2124561162454222"/>
+<connection id="141" src-id="139" dest-id="25" weight="-2.0516741742470037"/>
+<connection id="185" src-id="23" dest-id="174" weight="-0.2717801140995556"/>
+<connection id="186" src-id="174" dest-id="26" weight="0.08796579838864854"/>
+<connection id="298" src-id="23" dest-id="297" weight="-3.0"/>
+<connection id="299" src-id="297" dest-id="26" weight="3.0"/>
+<connection id="328" src-id="103" dest-id="25" weight="-1.3576151612008953"/>
+<connection id="426" src-id="297" dest-id="174" weight="-0.7999479899755852"/>
+</chromosome>

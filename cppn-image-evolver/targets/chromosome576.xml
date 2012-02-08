@@ -1,0 +1,82 @@
+<chromosome id="576">
+<neuron id="0" type="in" activation="identity(x)" label="bias"/>
+<neuron id="1" type="in" activation="identity(x)" label="d"/>
+<neuron id="2" type="in" activation="identity(x)" label="x"/>
+<neuron id="3" type="in" activation="identity(x)" label="y"/>
+<neuron id="4" type="out" activation="gaussian(x)" label="ink"/>
+<neuron id="5" type="hid" activation="gaussian(x)"/>
+<neuron id="30" type="hid" activation="gaussian(x)"/>
+<neuron id="32" type="hid" activation="gaussian(x)"/>
+<neuron id="44" type="hid" activation="sin(x)"/>
+<neuron id="64" type="hid" activation="gaussian(x)"/>
+<neuron id="67" type="hid" activation="gaussian(x)"/>
+<neuron id="96" type="hid" activation="gaussian(x)"/>
+<neuron id="103" type="hid" activation="gaussian(x)"/>
+<neuron id="106" type="hid" activation="gaussian(x)"/>
+<neuron id="136" type="hid" activation="sin(x)"/>
+<neuron id="156" type="hid" activation="gaussian(x)"/>
+<neuron id="201" type="hid" activation="gaussian(x)"/>
+<neuron id="223" type="hid" activation="gaussian(x)"/>
+<neuron id="238" type="hid" activation="gaussian(x)"/>
+<neuron id="281" type="hid" activation="gaussian(x)"/>
+<neuron id="298" type="hid" activation="gaussian(x)"/>
+<neuron id="321" type="hid" activation="gaussian(x)"/>
+<neuron id="360" type="hid" activation="gaussian(x)"/>
+<connection id="198" src-id="2" dest-id="32" weight="0.3566547919236649"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.6413524971439237"/>
+<connection id="7" src-id="1" dest-id="5" weight="-1.9593153372825693"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.3302046740351158"/>
+<connection id="9" src-id="3" dest-id="5" weight="2.0435993166967195"/>
+<connection id="10" src-id="5" dest-id="4" weight="-0.8084863515132545"/>
+<connection id="28" src-id="3" dest-id="106" weight="-0.7821283492256342"/>
+<connection id="31" src-id="103" dest-id="30" weight="-0.4450539653659765"/>
+<connection id="197" src-id="30" dest-id="106" weight="0.7491848415195232"/>
+<connection id="33" src-id="1" dest-id="32" weight="-0.17528168747162653"/>
+<connection id="34" src-id="32" dest-id="5" weight="-0.9507597501662584"/>
+<connection id="41" src-id="106" dest-id="5" weight="-1.6228716924121847"/>
+<connection id="45" src-id="3" dest-id="32" weight="2.103069243604625"/>
+<connection id="199" src-id="1" dest-id="44" weight="2.9884688684613963"/>
+<connection id="46" src-id="44" dest-id="106" weight="1.9378633366706794"/>
+<connection id="59" src-id="0" dest-id="32" weight="0.5180761361354571"/>
+<connection id="65" src-id="156" dest-id="64" weight="-0.3173481794226165"/>
+<connection id="66" src-id="64" dest-id="106" weight="1.4906547454295054"/>
+<connection id="68" src-id="3" dest-id="67" weight="2.866673989731464"/>
+<connection id="69" src-id="67" dest-id="32" weight="-0.33657381690053545"/>
+<connection id="76" src-id="106" dest-id="4" weight="0.2745979798753708"/>
+<connection id="81" src-id="103" dest-id="44" weight="-0.25924680724610183"/>
+<connection id="97" src-id="1" dest-id="96" weight="1.726418671601825"/>
+<connection id="98" src-id="96" dest-id="106" weight="0.0018668364788525516"/>
+<connection id="196" src-id="67" dest-id="156" weight="0.5344723222961489"/>
+<connection id="107" src-id="1" dest-id="106" weight="-1.1808558558631952"/>
+<connection id="108" src-id="106" dest-id="32" weight="2.840840043845216"/>
+<connection id="118" src-id="96" dest-id="103" weight="0.029277431708193302"/>
+<connection id="119" src-id="103" dest-id="106" weight="1.1071927890407922"/>
+<connection id="127" src-id="1" dest-id="4" weight="0.04727504223001344"/>
+<connection id="137" src-id="96" dest-id="136" weight="0.030178331446069517"/>
+<connection id="138" src-id="136" dest-id="106" weight="-3.0"/>
+<connection id="157" src-id="1" dest-id="156" weight="-0.12768478388762555"/>
+<connection id="158" src-id="156" dest-id="106" weight="-3.0"/>
+<connection id="161" src-id="96" dest-id="5" weight="-0.8522176397590367"/>
+<connection id="183" src-id="67" dest-id="103" weight="0.47531739639476633"/>
+<connection id="202" src-id="67" dest-id="201" weight="-1.0341815267194334"/>
+<connection id="203" src-id="201" dest-id="32" weight="-1.319531079315555"/>
+<connection id="224" src-id="106" dest-id="223" weight="2.1046613275019848"/>
+<connection id="225" src-id="223" dest-id="32" weight="-1.1641215853899358"/>
+<connection id="239" src-id="3" dest-id="238" weight="-2.261658087441334"/>
+<connection id="240" src-id="238" dest-id="67" weight="0.29633764633153215"/>
+<connection id="245" src-id="3" dest-id="30" weight="0.42425888901734243"/>
+<connection id="264" src-id="103" dest-id="32" weight="-1.344298698285892"/>
+<connection id="282" src-id="30" dest-id="281" weight="1.636583472800109"/>
+<connection id="283" src-id="281" dest-id="106" weight="-0.09854233930213208"/>
+<connection id="299" src-id="103" dest-id="298" weight="1.0200984857720672"/>
+<connection id="300" src-id="298" dest-id="32" weight="-1.7487136253008708"/>
+<connection id="322" src-id="0" dest-id="321" weight="1.2497459339294916"/>
+<connection id="323" src-id="321" dest-id="32" weight="0.316887078352996"/>
+<connection id="361" src-id="67" dest-id="360" weight="-2.242269171493547"/>
+<connection id="362" src-id="360" dest-id="32" weight="-0.8102427180770357"/>
+<connection id="377" src-id="67" dest-id="281" weight="0.9453575810912882"/>
+<connection id="466" src-id="44" dest-id="30" weight="0.7915699340057758"/>
+<connection id="470" src-id="281" dest-id="321" weight="2.753002161446246"/>
+<connection id="491" src-id="1" dest-id="281" weight="-1.6859600613138819"/>
+<connection id="545" src-id="1" dest-id="321" weight="-2.864702482305879"/>
+</chromosome>

@@ -1,0 +1,16 @@
+<chromosome id="7568" primary-parent-id="7286"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<connection id="193" src-id="3" dest-id="4" weight="-0.3459294849098895"/>
+<neuron id="1137" type="hid" activation="signed.sinusoid"/>
+<neuron id="3352" type="hid" activation="signed.sigmoid"/>
+<connection id="3353" src-id="1137" dest-id="3352" weight="3.0"/>
+<neuron id="3865" type="hid" activation="linear"/>
+<connection id="3866" src-id="3352" dest-id="3865" weight="1.4954134086269466"/>
+<connection id="3867" src-id="3865" dest-id="4" weight="2.55353618864682"/>
+<neuron id="5163" type="hid" activation="linear"/>
+<connection id="5164" src-id="1" dest-id="5163" weight="1.0"/>
+<connection id="5165" src-id="5163" dest-id="1137" weight="0.7716556366852576"/>
+</chromosome>

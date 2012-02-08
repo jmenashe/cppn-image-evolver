@@ -1,0 +1,17 @@
+<chromosome id="3390" primary-parent-id="2875"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="8" src-id="2" dest-id="5" weight="-0.26092706925524434"/>
+<neuron id="177" type="hid" activation="signed.sinusoid"/>
+<neuron id="329" type="hid" activation="signed.sinusoid"/>
+<connection id="330" src-id="177" dest-id="329" weight="0.37076212721614277"/>
+<connection id="331" src-id="329" dest-id="4" weight="-0.6277413877184541"/>
+<neuron id="470" type="hid" activation="signed.sigmoid"/>
+<connection id="472" src-id="470" dest-id="177" weight="0.06219412970205984"/>
+<neuron id="2707" type="hid" activation="signed.sinusoid"/>
+<connection id="2708" src-id="5" dest-id="2707" weight="1.0"/>
+<connection id="2709" src-id="2707" dest-id="470" weight="2.153270740891264"/>
+</chromosome>

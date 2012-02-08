@@ -1,0 +1,19 @@
+<chromosome id="8613" primary-parent-id="7946"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<connection id="193" src-id="3" dest-id="4" weight="-0.2882389441055446"/>
+<neuron id="1137" type="hid" activation="signed.sinusoid"/>
+<connection id="1409" src-id="1" dest-id="1137" weight="-0.6070986497247932"/>
+<neuron id="3352" type="hid" activation="signed.sigmoid"/>
+<connection id="3353" src-id="1137" dest-id="3352" weight="3.0"/>
+<neuron id="3865" type="hid" activation="linear"/>
+<connection id="3867" src-id="3865" dest-id="4" weight="2.621720411148431"/>
+<connection id="3868" src-id="3" dest-id="3352" weight="0.16542610066728014"/>
+<neuron id="7052" type="hid" activation="signed.sinusoid"/>
+<connection id="7054" src-id="7052" dest-id="3865" weight="2.5378963438138995"/>
+<neuron id="7452" type="hid" activation="signed.sigmoid"/>
+<connection id="7453" src-id="3352" dest-id="7452" weight="1.0"/>
+<connection id="7454" src-id="7452" dest-id="7052" weight="1.3091036231339732"/>
+</chromosome>

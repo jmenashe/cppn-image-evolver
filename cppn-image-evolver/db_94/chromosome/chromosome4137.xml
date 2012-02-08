@@ -1,0 +1,12 @@
+<chromosome id="4137" primary-parent-id="3973"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<connection id="193" src-id="3" dest-id="4" weight="-2.462391252550967"/>
+<neuron id="1142" type="hid" activation="linear"/>
+<connection id="1143" src-id="0" dest-id="1142" weight="-0.7438341886872717"/>
+<neuron id="2966" type="hid" activation="linear"/>
+<connection id="2967" src-id="1142" dest-id="2966" weight="1.0"/>
+<connection id="2968" src-id="2966" dest-id="4" weight="1.0564317334531823"/>
+</chromosome>

@@ -1,0 +1,15 @@
+<chromosome id="977" primary-parent-id="759"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="0.0640083936814464"/>
+<connection id="9" src-id="3" dest-id="5" weight="-0.1323160612429718"/>
+<neuron id="174" type="hid" activation="signed.sinusoid"/>
+<connection id="175" src-id="1" dest-id="174" weight="-0.11128362570902772"/>
+<connection id="176" src-id="174" dest-id="5" weight="-0.7984267473220825"/>
+<neuron id="177" type="hid" activation="signed.gaussian"/>
+<connection id="178" src-id="5" dest-id="177" weight="1.15634586296675"/>
+<connection id="179" src-id="177" dest-id="4" weight="1.6557673727885551"/>
+</chromosome>

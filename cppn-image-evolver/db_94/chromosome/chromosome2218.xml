@@ -1,0 +1,20 @@
+<chromosome id="2218" primary-parent-id="1988"><neuron id="0" type="in" activation="identity(x)"/>
+<neuron id="1" type="in" activation="identity(x)"/>
+<neuron id="2" type="in" activation="identity(x)"/>
+<neuron id="3" type="in" activation="identity(x)"/>
+<neuron id="4" type="out" activation="gaussian(x)"/>
+<neuron id="5" type="hid" activation="linear"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.2261723826760687"/>
+<connection id="10" src-id="5" dest-id="4" weight="1.2160986247764765"/>
+<neuron id="161" type="hid" activation="signed.sinusoid"/>
+<connection id="162" src-id="3" dest-id="161" weight="0.652761838107734"/>
+<connection id="163" src-id="161" dest-id="5" weight="0.4698573930851664"/>
+<connection id="173" src-id="2" dest-id="4" weight="-0.11150077737643194"/>
+<neuron id="174" type="hid" activation="signed.sinusoid"/>
+<connection id="176" src-id="174" dest-id="5" weight="-1.2910474727505998"/>
+<neuron id="321" type="hid" activation="signed.sinusoid"/>
+<connection id="323" src-id="321" dest-id="174" weight="2.653059769519639"/>
+<neuron id="1917" type="hid" activation="signed.gaussian"/>
+<connection id="1918" src-id="1" dest-id="1917" weight="1.0"/>
+<connection id="1919" src-id="1917" dest-id="321" weight="0.9297030274016004"/>
+</chromosome>
