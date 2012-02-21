@@ -76,7 +76,7 @@ public class Chromosome implements Comparable<Chromosome>, Serializable {
 	 * A value of -1 indicates that this field has not yet been set with this Chromosmome's fitness
 	 * values (valid fitness values are always positive).
 	 */
-	protected int m_miscValue = -1;
+//	protected int m_miscValue = -1;
 	
 	protected Specie m_specie = null;
 	
@@ -206,9 +206,9 @@ public class Chromosome implements Comparable<Chromosome>, Serializable {
 	 * @return a positive integer value representing the fitness of this Chromosome, or -1 if
 	 * fitness function has not yet assigned a fitness value to this Chromosome.
 	 */
-	public int getMiscValue() {
-		return m_miscValue;
-	}
+//	public int getMiscValue() {
+//		return m_miscValue;
+//	}
 	
 	public List<NeuronAllele> getNodes() {
 		List<NeuronAllele> nodes = new ArrayList<NeuronAllele>();
@@ -311,12 +311,12 @@ public class Chromosome implements Comparable<Chromosome>, Serializable {
 	 * not affect selection.  This info is written to the run log to be used later.
 	 * @param i
 	 */
-	public void setMiscValue( int a_newMiscValue ) {
-		if ( a_newMiscValue > 0 )
-			m_miscValue = a_newMiscValue;
-		else
-			m_miscValue = 1;		
-	}
+//	public void setMiscValue( int a_newMiscValue ) {
+//		if ( a_newMiscValue > 0 )
+//			m_miscValue = a_newMiscValue;
+//		else
+//			m_miscValue = 1;		
+//	}
 	
 	/**
 	 * should only be called from Specie; assigns this chromosome to <code>aSpecie</code>; throws

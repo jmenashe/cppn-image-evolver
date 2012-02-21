@@ -62,8 +62,7 @@ public class Generation implements XmlPersistable {
 		StringBuffer result = new StringBuffer();
 		result.append( "<" ).append( GENERATION_TAG ).append( " id=\"" ).append( id ).append("\" >\n" );
 		result.append( "<champ id=\"" ).append( champ.getId() ).append( "\" >\n" );
-		result.append( "<fitness>" ).append( champ.getMiscValue() ).append( "</fitness>\n" );
-		result.append( "<novelty>" ).append( champ.getFitnessValue() ).append( "</novelty>\n" );
+		result.append( "<fitness>" ).append( champ.getFitnessValue() ).append( "</fitness>\n" );
 		result.append( "<nodes>" ).append( champ.getNodes().size() ).append( "</nodes>\n" );
 		result.append( "<connections>" ).append( champ.getConnections().size() ).append( "</connections>\n" );
 		result.append( "</champ>\n" );

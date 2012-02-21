@@ -60,8 +60,8 @@ public void geneticEventFired( GeneticEvent event ) {
 		double maxFitnessValue = ( config.getBulkFitnessFunction() != null ) ? config
 				.getBulkFitnessFunction().getMaxFitnessValue() : config.getFitnessFunction()
 				.getMaxFitnessValue();
-		double fitness = ( maxFitnessValue == 0 ) ? fittest.getMiscValue() : ( fittest
-				.getMiscValue() / maxFitnessValue );
+		double fitness = ( maxFitnessValue == 0 ) ? fittest.getFitnessValue() : ( fittest
+				.getFitnessValue() / maxFitnessValue );
 		logger.info( "species count: " + genotype.getSpecies().size() );
 		int maxFitnessCount = 0;
 		for (Chromosome c : genotype.getChromosomes()) {

@@ -390,7 +390,7 @@ public class Genotype implements Serializable {
 			if (fittestChromosome == null)
 				fittestChromosome = chrom;
 			// Added to record fittest individual during novelty search
-			if (chrom.getMiscValue() > fittestChromosome.getMiscValue())
+			if (chrom.getFitnessValue() > fittestChromosome.getFitnessValue())
 				fittestChromosome = chrom;
 			//		// Removed temporarily while novelty is the selection criteria
 			//		if (chrom.getFitnessValue() > fittestChromosome.getFitnessValue())
