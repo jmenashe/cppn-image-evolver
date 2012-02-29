@@ -20,9 +20,11 @@
 package edu.ucf.eplex.imageEvolver.util;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 
@@ -79,10 +81,10 @@ public class ImageCompare {
 		for (Chromosome c : chroms) {
 			long start = System.currentTimeMillis();
 			System.out.print("rendering targetImage" + c.getId() + "...");
-			Image target = fitnessFunc.getTargetImage();			
+			List<Image> targets = fitnessFunc.getTargetImages();			
 			Image subject = fitnessFunc.loadGreyscaleImage(c);
 			System.out.print("writing...");
-			new EvolutionViewer("Subject " +c.getId()+ " vs. Image " +c.getId(), subject, target);	
+			new EvolutionViewer("Subject " +c.getId()+ " vs. Image " +c.getId(), subject, targets);	
 //			System.out.println( c.getId() + "\t" + fitnessFunc.getAvgPixelErr( c ) );
 			ImageIO.write((RenderedImage) subject, "png", new File("./imageTargets/target" +c.getId()+"_"+(chroms.indexOf(c)+1)+".png"));
 			long stop = System.currentTimeMillis();

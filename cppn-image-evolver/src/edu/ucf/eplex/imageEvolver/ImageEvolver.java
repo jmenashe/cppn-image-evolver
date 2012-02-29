@@ -19,8 +19,10 @@
  */
 package edu.ucf.eplex.imageEvolver;
 
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -132,6 +134,7 @@ public class ImageEvolver implements BulkFitnessFunction, Configurable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	private static int[] set24bitGreyscale(int[] image) {
@@ -154,14 +157,16 @@ public class ImageEvolver implements BulkFitnessFunction, Configurable {
 
 	private final FuzzyHammingDist ff = new FuzzyHammingDist();
 	
-	private double graidentThreshold = DEFAULT_GRADIENT_SENSITIVITY;
+	private double gradientThreshold = DEFAULT_GRADIENT_SENSITIVITY;
 	private double grayValue = DEFAULT_GRAYSCALE_SENSITIVITY;
 
-	private int[] targetFeatureSet_Pixels;
-	private int[] targetFeatureSet_Gradient;
+	private List<int[]> targetFeatureSets_Pixels = new ArrayList<int[]>();
+	private List<int[]> targetFeatureSets_Gradient = new ArrayList<int[]>();
 
-	private double[] normalizedTargetFeatureSet_Pixels;
-	private double[] normalizedTargetFeatureSet_Gradient;
+	private List<double[]> normalizedTargetFeatureSets_Pixels = new ArrayList<double[]>();
+	private List<double[]> normalizedTargetFeatureSets_Gradient = new ArrayList<double[]>();
+	
+	private int targetCount = 0;
 	
 	private String targetImageFile = DEFAULT_TARGET_IMAGE;
 
@@ -198,22 +203,25 @@ public class ImageEvolver implements BulkFitnessFunction, Configurable {
 		double [] normalizedSubjectPixelSet;
 		double [] normalizedSubjectGradientSet;
 
-		int fitness, count;
-		fitness = 0;
-		count = 0;
 		subjectPixelSet = loadImageArray(subject);
 		normalizedSubjectPixelSet = normalize(subjectPixelSet, grayValue);
-		
-		if (evaluateGrayscale) {
-			fitness += ff.evaluate(normalizedSubjectPixelSet, normalizedTargetFeatureSet_Pixels);
-			count++;
+		subject.setFitnessValue(0);
+		for(int i = 0; i < targetCount; i++){
+			int fitness = 0, count = 0;
+			double[] pixels = normalizedTargetFeatureSets_Pixels.get(i);
+			double[] gradient = normalizedTargetFeatureSets_Pixels.get(i);
+			if (evaluateGrayscale) {
+				fitness += ff.evaluate(normalizedSubjectPixelSet, pixels);
+				count++;
+			}
+			if (evaluateGradient) {
+				normalizedSubjectGradientSet = normalize(computeFeatureSet_Gradient(subjectPixelSet), gradientThreshold);
+				fitness += ff.evaluate(normalizedSubjectGradientSet, gradient);
+				count++;
+			}
+			if(subject.getFitnessValue() < fitness / count)
+				subject.setFitnessValue(fitness/count);
 		}
-		if (evaluateGradient) {
-			normalizedSubjectGradientSet = normalize(computeFeatureSet_Gradient(subjectPixelSet), graidentThreshold);
-			fitness += ff.evaluate(normalizedSubjectGradientSet, normalizedTargetFeatureSet_Gradient);
-			count++;
-		}
-		subject.setFitnessValue(fitness/count);
 	}
 	/**
 	 * @see org.jgap.BulkFitnessFunction#evaluate(java.util.List)
@@ -241,8 +249,13 @@ public class ImageEvolver implements BulkFitnessFunction, Configurable {
 		return ff.getMaxFitness();
 	}
 	
-	public BufferedImage getTargetImage() {
-		return getImageFromArray(set24bitGreyscale(targetFeatureSet_Pixels), width, height);
+	public List<Image> getTargetImages() {
+		LinkedList<Image> images = new LinkedList<Image>();
+		for(int[] pixels : targetFeatureSets_Pixels){
+			BufferedImage image = getImageFromArray(set24bitGreyscale(pixels), width, height);
+			images.add(image);
+		}
+		return images;
 	}
 	/**
 	 * @see com.anji.util.Configurable#init(com.anji.util.Properties)
@@ -254,43 +267,44 @@ public class ImageEvolver implements BulkFitnessFunction, Configurable {
 
 		// Load target chromosome from XML
 		targetImageFile = props.getProperty( TARGET_IMAGE_KEY, DEFAULT_TARGET_IMAGE );	
-		Persistence db = (Persistence) props.newObjectProperty( Persistence.PERSISTENCE_CLASS_KEY );
-		Configuration config = new DummyConfiguration();
-		Chromosome targetChromosome = db.loadTargetChromosome( targetImageFile, config );
-		if ( targetChromosome == null ) throw new IllegalArgumentException( "no chromosome found: " + targetImageFile );
-
+		System.out.println("Generating target image feature sets...pixels...");
+		for(String target : targetImageFile.split(",")){
+			Persistence db = (Persistence) props.newObjectProperty( Persistence.PERSISTENCE_CLASS_KEY );
+			Configuration config = new DummyConfiguration();
+			Chromosome targetChromosome = db.loadTargetChromosome( target, config );
+			if ( targetChromosome == null ) throw new IllegalArgumentException( "no chromosome found: " + targetImageFile );
+			targetFeatureSets_Pixels.add(loadImageArray(targetChromosome));
+			targetCount++;
+		}
+		
 		grayValue = props.getDoubleProperty( GRAYSCALE_SENSITIVITY_KEY, DEFAULT_GRAYSCALE_SENSITIVITY );
-		graidentThreshold = props.getDoubleProperty( GRADIENT_SENSITIVITY_KEY, DEFAULT_GRADIENT_SENSITIVITY );
+		gradientThreshold = props.getDoubleProperty( GRADIENT_SENSITIVITY_KEY, DEFAULT_GRADIENT_SENSITIVITY );
 		
 		evaluateGrayscale = props.getBooleanProperty( EVALUATE_GRAYSCALE_KEY, DEFAULT_EVALUATE_GRAYSCALE );
 		evaluateGradient = props.getBooleanProperty( EVALUATE_GRADIENT_KEY, DEFAULT_EVALUATE_GRADIENT );
-
 		ff.init(props);
-
-		System.out.print("Generating target image feature set...");
-		
-		System.out.print("pixels...");
-		targetFeatureSet_Pixels = loadImageArray(targetChromosome);
 		
 		System.out.print("gradients...");
-		targetFeatureSet_Gradient = computeFeatureSet_Gradient(targetFeatureSet_Pixels);
-
-		grayValue = 0;
-		for (int i : targetFeatureSet_Pixels) {
-			grayValue = Math.max(i, grayValue);
-		}
-		int min = Integer.MAX_VALUE;
-		int max = Integer.MIN_VALUE;
-		for (int i : targetFeatureSet_Gradient) {
-			min = Math.min(i, min);
-			max = Math.max(i, max);
-		}
-		graidentThreshold = max - min;
+		for(int[] pixels : targetFeatureSets_Pixels){
+			int [] gradient = computeFeatureSet_Gradient(pixels);
+			targetFeatureSets_Gradient.add(gradient);
 		
-		System.out.print("normalizing(" +grayValue+ ", " +graidentThreshold+ ")...");
-		normalizedTargetFeatureSet_Pixels = normalize(targetFeatureSet_Pixels, grayValue);
-		normalizedTargetFeatureSet_Gradient = normalize(targetFeatureSet_Gradient, graidentThreshold);
-		
+			grayValue = 0;
+			for (int i : pixels) {
+				grayValue = Math.max(i, grayValue);
+			}
+			int min = Integer.MAX_VALUE;
+			int max = Integer.MIN_VALUE;
+			for (int i : gradient) {
+				min = Math.min(i, min);
+				max = Math.max(i, max);
+			}
+			gradientThreshold = max - min;
+			
+			System.out.print("normalizing(" +grayValue+ ", " +gradientThreshold+ ")...");
+			normalizedTargetFeatureSets_Pixels.add(normalize(pixels, grayValue));
+			normalizedTargetFeatureSets_Gradient.add(normalize(gradient, gradientThreshold));
+		}
 		System.out.println("done.");
 				
 		if (visable) new EvolutionViewer(this);

@@ -20,7 +20,13 @@
 package edu.ucf.eplex.imageEvolver.gui;
 
 import java.awt.BorderLayout;
+import java.awt.ComponentOrientation;
+import java.awt.Container;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.util.List;
 
 import javax.swing.JFrame;
 
@@ -45,16 +51,29 @@ public class EvolutionViewer extends JFrame {
 	 */
 	public EvolutionViewer(ImageEvolver evolution) {
 		super("Evolution Viewer");
+		List<Image> targets = evolution.getTargetImages();
+		int baseWidth = targets.get(0).getWidth(this);
+		int baseHeight = targets.get(0).getHeight(this);
+		Container pane = getContentPane();
+		pane.setLayout(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
 		
-		ImagePanel targetPanel = new ImagePanel(evolution.getTargetImage());
-		ImagePanel champPanel = new ImagePanel();
+		ImagePanel champPanel = new ImagePanel(new BufferedImage(baseWidth, baseHeight, BufferedImage.TYPE_BYTE_GRAY));
+		champPanel.setSize(baseWidth, baseHeight);
 		evolution.registerChampObserver(champPanel);
+		c.gridx = 0;
+		c.fill = GridBagConstraints.HORIZONTAL;
+		pane.add(champPanel, c);
+		int x = 1;
+		for(Image target : targets){
+			ImagePanel targetPanel = new ImagePanel(target);
+			c.gridx = x++;
+			c.fill = GridBagConstraints.HORIZONTAL;
+			pane.add(targetPanel, c);
+		}
 		
-		maxX = 2 * evolution.getTargetImage().getWidth(this);
-		maxY = 22 + evolution.getTargetImage().getHeight(this);
-		
-		getContentPane().add(champPanel,  BorderLayout.WEST);
-		getContentPane().add(targetPanel, BorderLayout.EAST);
+		maxX = (1 + targets.size()) * baseWidth;
+		maxY = baseHeight;
 
 		setSize(maxX, maxY);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -74,4 +93,20 @@ public class EvolutionViewer extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 	}	
+	
+	public EvolutionViewer(String title, Image subject, List<Image> targets) {
+		super(title);
+
+		for(Image target : targets){
+			ImagePanel targetPanel = new ImagePanel(target);
+			getContentPane().add(targetPanel, BorderLayout.EAST);
+		}
+		ImagePanel subjectPanel = new ImagePanel(subject);
+		
+		getContentPane().add(subjectPanel,  BorderLayout.WEST);
+
+		setSize(maxX, maxY);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
 }
